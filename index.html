@@ -1,14 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Hello</h1>
-    <script src="script.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>WeatherApp</title>
+</head>
+<body>
+    <div class="container px-4">
+        <div class="row gx-5">
+            <div class="col shadow p-3 mb-5 bg-body rounded">
+                <div class="p-3 today-summary">
+                    <h1>Today</h1>
+                <p id="dateToday">Sunday 8th May 17:53</p>
+                </p>
+                
+                <span class="todays-temps">
+                    L:<span id="low">7</span>°C <strong>H: <span id= "high">19</span>°C</strong>
+                </span>
+                </div>
+                <div class="weather-icon-today">
+                    ☀️
+                </div>
+            </div>
+            <div class="col shadow p-3 mb-5 bg-body rounded">
+                <div class="current-city">
+                    <h2>Reading</h2>
+                    <div class="current-temp">
+                    <strong>Now:</strong> 
+                    <span id="temperature">17</span>
+                    <span>°C</span>
+                
+                    </div>
+                    <div id="current-weather">
+                    Mostly sunny
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-forecast shadow p-3 mb-5 bg-body rounded">
+                <div>
+                    📅 5-day forecast
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2 4 monday">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Monday</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">8°C - <strong>17°C</strong></h6>
+                              <span class="weather-icon icon-monday">☀️</span>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-2 4 tuesday">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Tuesday</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">7°C - <strong>15°C</strong></h6>
+                              <span class="weather-icon icon-tuesday">⛅</span>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-2 4 wednesday">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Wednesday</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">7°C - <strong>16°C</strong></h6>
+                              <span class="weather-icon icon-wednesday">☁️</span>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-2 4 thursday">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Thursday</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">7°C - <strong>16°C</strong></h6>
+                              <span class="weather-icon icon-thursday">⛅</span>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-2 4 friday">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Friday</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">8°C - <strong>18°C</h6>
+                              <span class="weather-icon icon-friday">⛅</span>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <form id = "search-form">
+                    <input type="text" class="search" placeholder="🔎Change city" id="search-city" />
+                    <input type="submit" class="submit" value="Search" />
+                  </form>
+            </div>
+            <button id="currentLocation"> 
+                Current location
+            </button>
+            <footer>Coded by Carm</footer>
+        </div>
+    </div>   
+    <script src = "src/script.js"></script>
+</body>
 </html>

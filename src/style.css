@@ -1,0 +1,58 @@
+body {
+  padding: 100px;
+}
+h2 {
+  padding: 20px;
+  font-size: 50px;
+}
+footer {
+  text-align: center;
+}
+
+.today-summary {
+  display: inline-block;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+.current-city {
+  text-align: center;
+  font-size: larger;
+}
+.weather-icon-today {
+  display: inline-block;
+  font-size: 100px;
+  padding-left: 10px;
+  height: 60px;
+  margin-top: 0;
+}
+.weather-icon {
+  display: inline-block;
+  font-size: 50px;
+  padding-left: 100px;
+  height: 30px;
+}
+.card-body {
+  width: 200px;
+  padding: 0;
+}
+
+.card :hover {
+  background: #9fd3c7;
+}
+
+.search {
+  text-align: left;
+}
+
+.units {
+  font-size: 15px;
+}
+
+#currentLocation:hover {
+  background: #9fd3c7;
+}
+  
+} #currentLocation {
+  margin: 15px 0;
+}
